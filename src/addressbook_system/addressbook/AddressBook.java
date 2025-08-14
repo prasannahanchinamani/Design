@@ -64,5 +64,24 @@ public class AddressBook {
             System.out.println("Contact not found!");
         }
     }
+    public void deleteContactDetails(){
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("Enter FirstName");
+        String first_name=scanner.nextLine();
+        System.out.println("Enter LastName");
+        String last_name=scanner.nextLine();
+        boolean found = false;
+        for (Contacts contact : contacts) {
+            if (contact.getFirstName().equalsIgnoreCase(first_name) &&
+                    contact.getLastName().equalsIgnoreCase(last_name)) {
+                found = true;
+                contacts.remove(contact);
+            }
+        }
+
+        if (!found) {
+            System.out.println("Contact not found!");
+        }
+    }
 
 }

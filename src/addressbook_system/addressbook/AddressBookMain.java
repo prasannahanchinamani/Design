@@ -61,6 +61,15 @@ public class AddressBookMain {
         else {
             return;
         }
+
+
+        System.out.println("\nDo you want to Deletecontact Details? (yes/no):");
+        String  status=scanner.nextLine();
+        if(status.equalsIgnoreCase("yes"))
+            addressBook.deleteContactDetails();
+        else {
+            return;
+        }
         scanner.close();
     }
 }
