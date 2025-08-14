@@ -53,6 +53,14 @@ public class AddressBookMain {
         System.out.println("\nAll Contacts in Address Book:");
         addressBook.showAllContacts();
 
+
+        System.out.println("\nDo you want to Edit contactDetails? (yes/no):");
+        String res=scanner.nextLine();
+        if(res.equalsIgnoreCase("yes"))
+        addressBook.editContactDetails();
+        else {
+            return;
+        }
         scanner.close();
     }
 }
