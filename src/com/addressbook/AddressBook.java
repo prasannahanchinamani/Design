@@ -18,6 +18,7 @@ public class AddressBook {
     public List<ContactPerson> getContacts() {
         return contacts;
     }
+
     public boolean editContact(String firstName, String lastName, ContactPerson newContactData) {
         for (int i = 0; i < contacts.size(); i++) {
             ContactPerson contact = contacts.get(i);
@@ -29,5 +30,12 @@ public class AddressBook {
         }
         return false;
     }
+
+    public boolean deleteContact(String firstName, String lastName) {
+        return contacts.removeIf(contact ->
+                contact.getFirstName().equalsIgnoreCase(firstName) &&
+                        contact.getLastName().equalsIgnoreCase(lastName));
+    }
+
 
 }
