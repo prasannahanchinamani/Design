@@ -25,4 +25,16 @@ public class AddressBook {
         }
         return false;
     }
+
+    public boolean removeContact(String first_name, String last_name) {
+        for (int i = 0; i < contacts.size(); i++) {
+            Contacts contact = contacts.get(i);
+            if (contact.getFirstName().equalsIgnoreCase(first_name) &&
+                    contact.getLastName().equalsIgnoreCase(last_name)) {
+                contacts.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }

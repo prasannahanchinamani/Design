@@ -74,6 +74,22 @@ public class AddressBookMain {
             } else {
                 System.out.println("Contact not found");
             }
+
+            System.out.print("Do you want to Remove a contact? (yes/no): ");
+            String res = scanner.nextLine();
+            if (res.equalsIgnoreCase("yes")) {
+                System.out.print("Enter First Name of contact to delete: ");
+                String deleteFirstName = scanner.nextLine();
+
+                System.out.print("Enter Last Name of contact to delete: ");
+                String deleteLastName = scanner.nextLine();
+                if (addressBook.removeContact(deleteFirstName, deleteLastName)) {
+                    System.out.println("Contact Deleted..");
+                } else {
+                    System.out.println("Contact Not Deleted..");
+                }
+
+            }
         }
     }
 }
