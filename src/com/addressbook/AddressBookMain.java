@@ -10,6 +10,7 @@ public class AddressBookMain {
         AddressBook addressBook = new AddressBook();
         Scanner scanner = new Scanner(System.in);
         boolean addMoreContact = true;
+             //use case 5
         while (addMoreContact) {
             System.out.println("Enter Contact Details:");
             System.out.print("First Name: ");
@@ -47,7 +48,7 @@ public class AddressBookMain {
                 addMoreContact = false;
             }
         }
-        //use case 5
+   
         System.out.print("Do you want to edit a contact? (yes/no): ");
         String response = scanner.nextLine();
         if (response.equalsIgnoreCase("yes")) {
