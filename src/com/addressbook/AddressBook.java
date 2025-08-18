@@ -19,6 +19,7 @@ public class AddressBook {
             Contacts contact = contacts.get(i);
             if (contact.getFirstName().equalsIgnoreCase(first_name) &&
                     contact.getLastName().equalsIgnoreCase(last_name)) {
+                contacts.set(i, newData);
                 return true;
             }
         }
