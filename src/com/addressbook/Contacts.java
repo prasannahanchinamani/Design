@@ -10,8 +10,7 @@ public class Contacts {
     private String phoneNumber;
     private String email;
 
-    public Contacts(String address, String city, String email,
-                    String firstName, String lastName, String phoneNumber, String state, String zip) {
+    public Contacts(String address, String city, String email, String firstName, String lastName, String phoneNumber, String state, String zip) {
         this.address = address;
         this.city = city;
         this.email = email;
@@ -32,15 +31,6 @@ public class Contacts {
 
     @Override
     public String toString() {
-        return "Contacts{" +
-                "address='" + address + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip='" + zip + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return "Contacts{" + "address='" + address + '\'' + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", city='" + city + '\'' + ", state='" + state + '\'' + ", zip='" + zip + '\'' + ", phoneNumber='" + phoneNumber + '\'' + ", email='" + email + '\'' + '}';
     }
 }
