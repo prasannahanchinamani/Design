@@ -6,10 +6,11 @@ import java.util.List;
 public class AddressBook {
     List<Contacts> contacts;
 
-     public AddressBook() {
+    public AddressBook() {
         contacts = new ArrayList<>();
     }
-    public  void addContact(Contacts contact){
-         contacts.add(contact);
+
+    public void addContact(Contacts contact) {
+        contacts.add(contact);
     }
 }
