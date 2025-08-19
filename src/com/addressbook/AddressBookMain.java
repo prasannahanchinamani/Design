@@ -1,14 +1,24 @@
 package com.addressbook;
 
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class AddressBookMain {
     public static void main(String[] args) {
         System.out.println("WelCome to Address Book!....");
-
-
-        AddressBook addressBook = new AddressBook();
+        AddressBook addressBook;
         Scanner scanner = new Scanner(System.in);
+        //use case 6  Each Address Book has a unique Name
+        LinkedHashMap<String, AddressBook> addressbookunique = new LinkedHashMap<>();
+        System.out.println("Enter the Book Name");
+        String addressbookname = scanner.nextLine();
+        if (addressbookunique.containsKey(addressbookname)) {
+            addressBook = addressbookunique.get(addressbookunique);
+            System.out.println("Already Present The BookName");
+        } else {
+            addressBook = new AddressBook();
+            addressbookunique.put(addressbookname, addressBook);
+        }
         boolean addMoreContact = true;
         while (addMoreContact) {
             System.out.println("Enter Contact Details:");
@@ -38,8 +48,7 @@ public class AddressBookMain {
 
             Contacts contact = new Contacts(firstName, lastName, address, city, state, zip, phoneNumber, email);
             addressBook.addContact(contact);
-
-            System.out.println("Contact added:");
+            System.out.println("Contact added to :"+addressbookunique);
             System.out.println(contact);
             System.out.print("Do you want to add another contact? (yes/no): ");
             String more = scanner.nextLine();
